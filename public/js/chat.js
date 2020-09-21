@@ -11,6 +11,9 @@ const urlTemplate = document.querySelector('#url-template').innerHTML
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
 
 const {username,room} = Qs.parse(location.search, {ignoreQueryPrefix:true})
+console.log("username", username)
+console.log("room", room)
+
 
 
 const autoscroll = () => {
