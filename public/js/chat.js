@@ -45,6 +45,7 @@ socket.on('message', (message) => {
         message:message.text,
         createdAt: moment(message.createdAt).format('h:mm a') } )
     $messages.insertAdjacentHTML('beforeend',html)
+    autoscroll()
 
     // addMsg(message)
 })
@@ -56,6 +57,7 @@ socket.on('locationMessage', (url) => {
             createdAt: moment(url.createdAt).format('h:mm a') } 
         )
     $messages.insertAdjacentHTML('beforeend',html)
+    autoscroll()
 
     // addMsg(message)
 })
